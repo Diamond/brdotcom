@@ -1,4 +1,7 @@
 Brdotcom::Application.routes.draw do
+  resources :users
+
+
   get "blog/index"
 
   resources :sections do
