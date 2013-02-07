@@ -1,0 +1,7 @@
+class Section < ActiveRecord::Base
+  attr_accessible :parent_id, :title, :aside, :ordering
+  belongs_to :section, :foreign_key => 'parent_id'
+  has_many :points
+
+  scope :ordered, order(:ordering)
+end

@@ -1,0 +1,16 @@
+<section id="section-<%= section.id %>">
+  <header>
+    <%= h2_or_h3 section %>
+  </header>
+  <% unless section.aside.nil? %>
+  <aside>
+    <%= section.aside %>
+  </aside>
+  <% end %>
+  <% if section.points.count > 0 %>
+  <ul>
+    <%= render section.points %>
+  </ul>
+  <% end %>
+  <%= render section.sections %>
+</section>

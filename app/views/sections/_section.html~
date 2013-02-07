@@ -1,0 +1,13 @@
+<section id="section-<%= section.id %>">
+  <header>
+    <h2><%= section.title %></h2>
+  </header>
+  <% unless section.aside.nil? %>
+  <aside>
+    <%= section.aside %>
+  </aside>
+  <% end %>
+  <ul>
+    <%= render section.points %>
+  </ul>
+</section>

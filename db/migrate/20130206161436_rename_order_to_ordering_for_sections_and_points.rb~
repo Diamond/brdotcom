@@ -1,0 +1,19 @@
+class RenameOrderToOrderingForSectionsAndPoints < ActiveRecord::Migration
+  def up
+    change_table :sections do |t|
+      t.change :order, :integer, {name: 'ordering'}
+    end
+    change_table :points do |t|
+      t.change :order, :integer, {name: 'ordering'}
+    end
+  end
+
+  def down
+    change_table :sections do |t|
+      t.change :ordering, :integer, {name: 'order'}
+    end
+    change_table :points do |t|
+      t.change :ordering, :integer, {name: 'order'}
+    end
+  end
+end

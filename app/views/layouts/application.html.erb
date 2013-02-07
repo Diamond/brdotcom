@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Brandon Richey</title>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <section id="resume-top">
+      <header>
+	<h1>Brandon Richey</h1>
+      </header>
+      <article id="contact-details" class="blue">
+	<a href="http://twitter.com/diamondgfx">twitter</a> &middot;
+	<a href="http://www.linkedin.com/profile/view?id=105331885&trk=tab_pro">linkedin</a> &middot;
+	<a href="https://github.com/Diamond">github</a> &middot;
+	<a href="http://www.codeschool.com/users/diamondgfx">codeschools</a> &middot;
+	<a href="http://www.codecademy.com/users/diamondgfx">codeacademy</a>
+      </article>
+      <nav>
+	<ul>
+	  <li><a href="#badges">Badges</a></li>
+	  <li><a href="#skills">Skills</a></li>
+	  <li><a href="#projects">Projects</a></li>
+	  <li><a href="#education">Education</a></li>
+	  <li><a href="#jobs">Jobs</a></li>
+	  <li><a href="#about">About</a></li>
+	</ul>
+      </nav>
+    </section>
+    <a name="badges"></a>
+    <section id="badges">
+      <header>
+	<h2>Badges</h2>
+      </header>
+      <article>
+	<h3>Code School</h3>
+	<div>
+	  <img src="cs-badges/coffeescript.png" alt="CoffeeScript">
+	  <img src="cs-badges/html5css3.png" alt="HTML5/CSS3">
+	  <img src="cs-badges/jquery1.png" alt="jQuery Part 1">
+	  <img src="cs-badges/jquery2.png" alt="jQuery Part 2">
+	  <img src="cs-badges/rfz.png" alt="Rails for Zombies">
+	  <img src="cs-badges/rfz2.png" alt="Rails for Zombies 2">
+	  <img src="cs-badges/trygit.png" alt="Try Git">
+	  <img src="cs-badges/tryruby.png" alt="Try Ruby">
+	  <img src="cs-badges/rubybits.png" alt="Ruby Bits 1">
+	  <img src="cs-badges/rubybits2.png" alt="Ruby Bits 2">
+	  <img src="cs-badges/railsbestpractices.png" alt="Rails Best Practices">
+	  <img src="cs-badges/gitreal.png" alt="Git Real">
+	</div>
+	<div>
+	  <a href="http://www.codeschool.com/users/diamondgfx">View Badges here</a>
+	</div>
+      </article>
+      <article>
+	<h3>Code Academy</h3>
+	<div>
+	  <a href="http://www.codecademy.com/users/diamondgfx">View Badges here</a>
+	</div>
+      </article>
+    </section>
+
+    <%= yield %>
+
+  </body>
+</html>

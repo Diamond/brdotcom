@@ -1,0 +1,5 @@
+class AddOrderToPoints < ActiveRecord::Migration
+  def change
+    add_column :points, :order, :integer
+  end
+end
