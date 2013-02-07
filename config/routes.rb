@@ -1,6 +1,11 @@
 Brdotcom::Application.routes.draw do
-  resources :users
+  get "user_sessions/new"
 
+  get "user_sessions/create"
+
+  get "user_sessions/destroy"
+
+  resources :users
 
   get "blog/index"
 
@@ -8,6 +13,13 @@ Brdotcom::Application.routes.draw do
     resources :points
   end
 
+  resources :user_sessions
+  resources :users
+
+  match 'login' => 'user_sessions#new', :as => :login
+  match 'logout' => 'user_sessions#destroy', :as => :logout
+
+  match 'home' => "blog#index", :as => :home
   root :to => "blog#index"
 
   # The priority is based upon order of creation:
