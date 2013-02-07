@@ -1,0 +1,29 @@
+<%= form_for(@point) do |f| %>
+  <% if @point.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@point.errors.count, "error") %> prohibited this point from being saved:</h2>
+
+      <ul>
+      <% @point.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <div class="field">
+      <%= f.label :body %><br>
+      <%= f.text_area :body %>
+    </div>
+    <div class="field">
+      <%= f.label :ordering %><br>
+      <%= f.number_field :ordering %>
+    </div>
+    <div class="field">
+      <%= f.label :parent_id %><br>
+      <%= collection_select :point, :section_id, Section.ordered, :id, :title %>
+    </div>
+    <%= f.submit %>
+  </div>
+<% end %>

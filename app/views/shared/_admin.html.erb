@@ -1,0 +1,9 @@
+<% if current_user %>
+<section id="admin">
+  <%= link_to "Home", :home %> |
+  <%= link_to "Edit Sections", sections_path %> |
+  <%= link_to "Edit Points", points_path %> |
+  Logged in as <%= link_to current_user.username, edit_user_path(current_user) %> |
+  <%= link_to "Logout", :logout %>
+</section>
+<% end %>

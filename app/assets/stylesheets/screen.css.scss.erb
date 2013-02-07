@@ -1,13 +1,11 @@
 body {
+    margin: 0px;
     background: image-url("navy_blue.png");
     color: #EEE;
     font-family: "Verdana";
     -webkit-text-shadow: 1px 1px 1px #000;
     -moz-text-shadow: 1px 1px 1px #000;
     text-shadow: 1px 1px 1px #000;
-}
-h3 {
-    font-weight: normal;
 }
 .blue, a {
     color: #4fb5ff;
@@ -20,9 +18,13 @@ article {
 }
 nav ul li {
     display: inline;
-    margin-left: 10%;
+    margin-left: 20px;
+    margin-right: 20px;
 }
-#resume-top {
+#resume-top, .workspace {
+    width: 95%;
+    margin: 0px auto;
+    margin-top: 20px;
     background: #4f4f4f;
     background: rgba(255, 255, 255, 0.1);
     -webkit-border-radius: 7px;
@@ -36,6 +38,9 @@ nav ul li {
 	margin: 0px auto;
 	text-align: center;
 	padding-bottom: 2px;
+    }
+    nav {
+	text-align: center;
     }
     nav ul li { display: inline; }
 }
@@ -51,6 +56,7 @@ nav ul li {
     margin-bottom: 5px;
 }
 section {
+    margin-left: 10px;
     aside, article, section {
 	margin-left: 20px;
     }
@@ -58,4 +64,33 @@ section {
 	margin-top: -10px;
 	font-size: small;
     }
+    margin-bottom: 20px;
+}
+.workspace {
+    padding: 20px;
+    margin: 0px auto;
+    h1 {
+	margin: 0px auto;
+	text-align: center;
+	padding-bottom: 2px;
+    }
+    input[type="text"],input[type="password"] {
+    	width: 100%;
+	border: 1px solid #aaa;
+	background: #ccc;
+    }	
+}
+#admin {
+    width: 100%;
+    margin: 0px;
+    padding: 10px;
+    background: #222;
+    border: none;
+    border-bottom: 2px solid #4fb5ff;
+}
+.error {
+    color: #ff0000;
+}
+.toplevel {
+    background: #111;
 }

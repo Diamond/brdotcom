@@ -7,6 +7,7 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
+    <%= render "shared/admin" %>
     <section id="resume-top">
       <header>
 	<h1>Brandon Richey</h1>
@@ -20,12 +21,7 @@
       </article>
       <nav>
 	<ul>
-	  <li><a href="/#badges">Badges</a></li>
-	  <li><a href="/#skills">Skills</a></li>
-	  <li><a href="/#projects">Projects</a></li>
-	  <li><a href="/#education">Education</a></li>
-	  <li><a href="/#jobs">Jobs</a></li>
-	  <li><a href="/#about">About</a></li>
+	  <%= build_nav @nav_items %>
 	</ul>
       </nav>
     </section>

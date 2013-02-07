@@ -3,4 +3,5 @@ class Point < ActiveRecord::Base
   belongs_to :section
 
   scope :ordered, order(:ordering)
+  scope :hierarchy, order(:section_id).order(:ordering)
 end

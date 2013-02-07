@@ -9,12 +9,16 @@ class UserSessionsController < ApplicationController
       if @user = login(params[:username], params[:password])
         format.html { redirect_back_or_to :home, :notice => "Login successful!" }
       else
-        format.html { flash.now[:alert] = "Login failed!"; render :action => "new" }
+        format.html do
+          flash.now[:alert] = "Login failed!"
+          render :action => "new"
+        end
       end
+    end
   end
 
   def destroy
     logout
-    redirect_to :users, :notice => "Logged out!"
+    redirect_to :home, :notice => "Logged out!"
   end
 end

@@ -1,0 +1,16 @@
+<div class="workspace">
+  <p>
+    <b>Section:</b>
+    <%= @point.section.title %>
+  </p>
+  <p>
+    <b>Body</b>
+    <%= @point.body %>
+  </p>
+  <p>
+    <b>Ordering:</b>
+    <%= @point.ordering %>
+  </p>
+  <%= link_to 'Edit', edit_point_path(@point) %> |
+  <%= link_to 'Back', points_path %>
+</div>

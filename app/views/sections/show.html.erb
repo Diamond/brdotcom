@@ -1,0 +1,22 @@
+<div class="workspace">
+  <% unless @section.parent.nil? %>
+  <p>
+    <b>Parent:</b>
+    <%= @section.parent.title %>
+  </p>
+  <% end %>
+  <p>
+    <b>Section:</b>
+    <%= @section.title %>
+  </p>
+  <p>
+    <b>Aside:</b>
+    <%= @section.aside.nil? ? @section.aside : "n/a" %>
+  </p>
+  <p>
+    <b>Ordering:</b>
+    <%= @section.ordering %>
+  </p>
+  <%= link_to 'Edit', edit_section_path(@section) %> |
+  <%= link_to 'Back', sections_path %>
+</div>
