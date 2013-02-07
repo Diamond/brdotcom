@@ -11,14 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130206161436) do
+ActiveRecord::Schema.define(:version => 20130207030330) do
 
   create_table "points", :force => true do |t|
     t.text     "body"
     t.integer  "section_id"
     t.datetime "created_at",                :null => false
     t.datetime "updated_at",                :null => false
-    t.integer  "ordering",      :default => 0
+    t.integer  "ordering",   :default => 0
   end
 
   create_table "sections", :force => true do |t|
@@ -27,7 +27,16 @@ ActiveRecord::Schema.define(:version => 20130206161436) do
     t.datetime "created_at",                :null => false
     t.datetime "updated_at",                :null => false
     t.string   "aside"
-    t.integer  "ordering",      :default => 0
+    t.integer  "ordering",   :default => 0
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "username",         :null => false
+    t.string   "email"
+    t.string   "crypted_password"
+    t.string   "salt"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
   end
 
 end
