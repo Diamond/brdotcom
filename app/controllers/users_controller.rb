@@ -1,4 +1,12 @@
 class UsersController < ApplicationController
+  def edit
+    @user = User.find(params[:id])
+
+    respond_to do |format|
+      format.html
+    end
+  end
+
   # GET /users/1
   # GET /users/1.json
   def show

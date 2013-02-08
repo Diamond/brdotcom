@@ -16,3 +16,6 @@
 
 # Ignore any emacs temp/backup files
 *~
+
+# Ignore the database config file
+config/database.yml
